@@ -52,13 +52,7 @@ export class Translator {
 
         return {browser,page}
     }
-
-    /**
-     * 구글 번역을 사용하여 한국어 문장을 특정 언어로 번역하여 반환합니다.
-     * @param source 번역할 한국어 문장
-     * @param lang 문장을 번역할 언어
-     * @returns 번역 결과
-     */
+    
     static async google(source: string, startLang: LangType, targetLang: LangType) {
 
         try {
@@ -159,8 +153,6 @@ export class Translator {
             throw err;
 
         } finally {
-
-            // 브라우저를 종료합니다.
             await browser.close();
         }
     }
@@ -190,7 +182,6 @@ export class Translator {
 
         } finally {
 
-            // 브라우저를 종료합니다.
             await browser.close();
         }
     }
